@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Guess The Number</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Guess The Number</h1>
+    </div>
+    <div class="instruction">
+        <p>Find the number between 1 to 100 within the given attempts.</p>
+    </div>
+
+    <div class="game-container">
+        <h3 id="modes">Modes</h3>
+    <div class="game">
+        <div class="easy hide">
+            <button id="easy-button">Easy😁</button>
+            <p class="attempt-line">7 attempts.</p>
+        </div>
+        <div class="normal hide">
+            <button id="normal-button">Normal😐</button>
+            <p class="attempt-line">5 attempts.</p>
+        </div>
+        <div class="hard hide">
+            <button id="hard-button">Hard😡</button>
+            <p class="attempt-line">3 attempts.</p>
+        </div>
+        <div class="impossible hide">
+            <button id="impossible-button">Impossible💀</button>
+            <p class="attempt-line">1 attempt.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="result">
+    <img src="/images/you_win.png" id="win">
+    <img src="/images/you_lose.png" id ="lose">
+    </div>
+
+    <div class="achivements hide">
+        <button id="achivement-button">Achivements👑</button>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

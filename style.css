@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+    height: 5rem;
+}
+
+.instruction{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#modes{
+    font-size: 1.75rem;
+    background-color:darkorange;
+    height: 3rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+button{
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 13rem;
+    border: 1px solid black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.game{
+    text-align: center;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 80rem;
+}
+
+.easy,.normal,.hard,.impossible{
+    margin-top: 1.5rem;
+}
+
+#easy-button{
+    background-color: rgb(23, 216, 23);
+}
+
+#normal-button{
+    background-color: yellow;
+}
+
+#hard-button{
+    background-color: rgb(236, 32, 32);
+}
+
+#impossible-button{
+    background-color: blueviolet;
+}
+
+.attempt-line{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.achivements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#achivement-button{
+    width: 15rem;
+    background-color: gold;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+}
