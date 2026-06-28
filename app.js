@@ -265,7 +265,6 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
        achivementsFolderHeadingPara.style.textAlign = "center";
        achivementsFolderHeading.appendChild(achivementsFolderHeadingPara);
 
-       achivementsFolderHeading.appendChild(closeImg);
        let closeImg = document.createElement("i");
        closeImg.className = "fa-solid fa-xmark";
        closeImg.style.display = "block";
@@ -276,8 +275,9 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
        closeImg.style.color = "red";
        closeImg.style.fontSize = "1.5rem";
        closeImg.onclick = () => {
-        achivementsFolder.style.display = "none";
-       }
+           achivementsFolder.style.display = "none";
+        }
+        achivementsFolderHeading.appendChild(closeImg);
 
        let achievementsContainer = document.createElement("div");
        achievementsContainer.style.height = "25rem";
