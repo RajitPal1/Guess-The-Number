@@ -6,14 +6,12 @@ let impossible = document.querySelector("#impossible-button");
 let hides = document.querySelectorAll(".hide");
 let attemptLines = document.querySelectorAll(".attempt-line");
 let achivements = document.querySelector("#achivement-button");
-let closeImg = document.querySelector("#cross");
 let winImg = document.querySelector("#win");
 let loseImg = document.querySelector("#lose");
 let instruction = document.querySelector(".instruction");
 let correctSign = document.querySelector("#correct");
 let attempt;
 
-closeImg.style.display = "none";
 winImg.style.display = "none";
 loseImg.style.display = "none";
 correctSign.style.display = "none";
@@ -234,7 +232,7 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
     "impossible",
     "noob"];   
 
-    let achivementsColor = ["rgb(23, 216, 23)","yellow","rgb(236, 32, 32)","blueviolet","black"]
+    let achivementsColor = ["rgb(23, 216, 23)","yellow","rgb(236, 32, 32)","blueviolet","#2563EB"]
 
     achivements.addEventListener("click", () => {
        let achivementsFolder = document.createElement("div");
@@ -268,6 +266,8 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
        achivementsFolderHeading.appendChild(achivementsFolderHeadingPara);
 
        achivementsFolderHeading.appendChild(closeImg);
+       let closeImg = document.createElement("i");
+       closeImg.className = "fa-solid fa-xmark";
        closeImg.style.display = "block";
        closeImg.style.position = "absolute";
        closeImg.style.top = "0px";
@@ -311,20 +311,27 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
        achivementHeadingPara.style.fontSize = "1.25rem";
        achivementHeadingPara.style.color = "grey";
 
-       achivement.appendChild(correctSign);
-       correctSign.style.display = "block";
-       correctSign.style.border = "1px solid black";
-       correctSign.style.marginLeft = "20px"
-       correctSign.style.maginBottom = "50px"
-       correctSign.style.padding = "5px";
-       correctSign.style.borderRadius = "50%";
-       correctSign.style.color = "rgb(23, 216, 23)"
+    let correctSign = document.createElement("i");
+    correctSign.className = "fa-solid fa-check";
+    correctSign.style.display = "none";
+    correctSign.style.color = "white";
+    correctSign.style.position = "absolute";
+    correctSign.style.right = "15px";
+    correctSign.style.top = "25px";
+    correctSign.style.padding = "7px";
+    correctSign.style.borderRadius = "50%";
+    correctSign.style.backgroundColor = "#22C55E"
+
+    achivement.style.position = "relative";
+    achivement.appendChild(correctSign);
       
 
        if (isAchievementUnlocked(achievementIds[i])) {
-           achivement.style.backgroundColor = "#d4edda"; // Green
-        }
-
+       correctSign.style.display = "block";
+    }
+       else {
+       correctSign.style.display = "none";
+    }
        achievementsContainer.appendChild(achivement);
     }
     }) 
