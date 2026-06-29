@@ -10,6 +10,7 @@ let winImg = document.querySelector("#win");
 let loseImg = document.querySelector("#lose");
 let instruction = document.querySelector(".instruction");
 let correctSign = document.querySelector("#correct");
+const gameArea = document.querySelector("#game-area");
 let attempt;
 
 winImg.style.display = "none";
@@ -72,7 +73,7 @@ const createGame = (attempt) => {
     numberBox.style.fontSize = "1rem";
     div.appendChild(numberBox);
 
-    document.body.appendChild(div);
+    gameArea.appendChild(div);
 
     let check = document.createElement("button");
     check.textContent = "Check";
@@ -94,7 +95,7 @@ const createGame = (attempt) => {
     })
 
     let showChecker = document.createElement("div");
-    document.body.appendChild(showChecker);
+    gameArea.appendChild(showChecker);
 
     let checker = document.createElement("p");
     checker.style.textAlign = "center";
@@ -105,13 +106,13 @@ const createGame = (attempt) => {
     let remainingAttempt = document.createElement("p");
     remainingAttempt.style.fontSize = "1.5rem"
     remainingAttempt.style.textAlign = "center";
-    document.body.appendChild(remainingAttempt);
+    gameArea.appendChild(remainingAttempt);
 
     let gameButton = document.createElement("div");
     gameButton.style.display = "flex";
     gameButton.style.justifyContent = "center";
     gameButton.style.alignItems = "center";
-    document.body.appendChild(gameButton);
+    gameArea.appendChild(gameButton);
     
     let reset = document.createElement("button");
     reset.textContent = "Reset Game";
@@ -246,7 +247,9 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
        achivementsFolder.style.borderRadius = "10px";
        achivementsFolder.style.backgroundColor = "white";
        achivementsFolder.style.border = "1px solid black";
-       document.body.appendChild(achivementsFolder);
+
+       
+       gameArea.appendChild(achivementsFolder);
 
        let achivementsFolderHeading = document.createElement("div");
        achivementsFolderHeading.style.height = "3rem";
@@ -284,6 +287,10 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
        achievementsContainer.style.overflowY = "auto";
        achievementsContainer.style.scrollbarWidth = "none";
        achivementsFolder.appendChild(achievementsContainer);
+
+       if(achivementsFolder.style.maxWidth = "500px"){
+        achivementsFolder.style.width = "20rem";
+       }
 
     for(let i = 0; i < achivementsName.length;i++)
     {
