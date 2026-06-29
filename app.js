@@ -237,6 +237,7 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
 
     achivements.addEventListener("click", () => {
        let achivementsFolder = document.createElement("div");
+       achivementsFolder.classList.add("achievement-folder");
        achivementsFolder.style.height = "29rem";
        achivementsFolder.style.width = "30rem";
        achivementsFolder.style.position = "fixed";
@@ -288,15 +289,11 @@ const startGame = (numberBox,attempt,check,checker,remainingAttempt,reset,newGam
        achievementsContainer.style.scrollbarWidth = "none";
        achivementsFolder.appendChild(achievementsContainer);
 
-       if(achivementsFolder.style.maxWidth = "500px"){
-        achivementsFolder.style.width = "20rem";
-       }
-
     for(let i = 0; i < achivementsName.length;i++)
     {
        let achivement = document.createElement("div");
        achivement.style.height = "5rem";
-       achivement.style.width = "30rem";
+       achivement.style.width = "100%";
        achivement.style.borderBottom = "1px solid black";
        let achivementHeading = document.createElement("h2");
        achivementHeading.textContent = `${achivementsName[i]}`;

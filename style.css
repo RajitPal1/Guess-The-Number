@@ -3,6 +3,17 @@
     padding: 0;
 }
 
+body{
+     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+}
+
 .heading{
     display: flex;
     justify-content: center;
@@ -57,7 +68,7 @@ button{
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    width: 80rem;
+    width: 100%;
 }
 
 .easy,.normal,.hard,.impossible{
@@ -100,4 +111,45 @@ button{
 .result{
     display: flex;
     justify-content: center;
+}
+
+.achievement-folder{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30rem;
+    height: 29rem;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+@media (min-width:300px) and (max-width:500px){
+    .game{
+        flex-direction: column;
+    }
+    .instruction{
+        font-size:1.5rem;
+    }
+    .achievement-folder{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30rem;
+    height: 29rem;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 1000;
+}
+    .achievement-folder{
+        width:90%;
+        max-width:350px;
+        height:80vh;
+    }
+
+   
 }
